@@ -3,7 +3,9 @@
   "name": "moltbot-sandbox",
   "main": "src/index.ts",
   "compatibility_date": "2026-02-02",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "vars": {
     "CF_ACCESS_TEAM_DOMAIN": "Humanlikeyou.cloudflareaccess.com",
     "WORKER_URL": "https://moltworker.tervellvsmith.workers.dev"
@@ -21,12 +23,16 @@
   "rules": [
     {
       "type": "Text",
-      "globs": ["**/*.html"],
+      "globs": [
+        "**/*.html"
+      ],
       "fallthrough": false
     },
     {
       "type": "Data",
-      "globs": ["**/*.png"],
+      "globs": [
+        "**/*.png"
+      ],
       "fallthrough": false
     }
   ],
@@ -51,7 +57,9 @@
   },
   "migrations": [
     {
-      "new_sqlite_classes": ["Sandbox"],
+      "new_sqlite_classes": [
+        "Sandbox"
+      ],
       "tag": "v1"
     }
   ],
@@ -62,12 +70,14 @@
     }
   ],
   "triggers": {
-    "crons": ["*/5 * * * *"]
+    "crons": [
+      "*/5 * * * *"
+    ]
   },
   "browser": {
     "binding": "BROWSER"
   }
-},
+}
   // Note: CF_ACCOUNT_ID should be set via `wrangler secret put CF_ACCOUNT_ID`
   // Secrets to configure via `wrangler secret put`:
   // - ANTHROPIC_API_KEY: Your Anthropic API key
