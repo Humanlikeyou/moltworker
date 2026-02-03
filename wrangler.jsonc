@@ -2,5 +2,41 @@
   "name": "moltworker",
   "main": "src/index.ts",
   "compatibility_date": "2026-02-02",
-  "compatibility_flags": ["nodejs_compat"]
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "vars": {
+    "CF_ACCESS_TEAM_DOMAIN": "Humanlikeyou.cloudflareaccess.com",
+    "WORKER_URL": "https://moltworker.tervellvsmith.workers.dev"
+  },
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS"
+  },
+  "build": {
+    "command": "npm run build"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "Sandbox",
+        "class_name": "Sandbox"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["Sandbox"]
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MOLTBOT_BUCKET",
+      "bucket_name": "moltbot-data"
+    }
+  ],
+  "browser": {
+    "binding": "BROWSER"
+  }
 }
