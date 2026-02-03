@@ -2,9 +2,7 @@
   "name": "moltworker",
   "main": "src/index.ts",
   "compatibility_date": "2026-02-02",
-  "compatibility_flags": [
-    "nodejs_compat"
-  ],
+  "compatibility_flags": ["nodejs_compat"],
   "vars": {
     "CF_ACCESS_TEAM_DOMAIN": "Humanlikeyou.cloudflareaccess.com",
     "WORKER_URL": "https://moltworker.tervellvsmith.workers.dev"
@@ -16,6 +14,14 @@
   "build": {
     "command": "npm run build"
   },
+  "containers": [
+    {
+      "class_name": "Sandbox",
+      "image": "./Dockerfile",
+      "instance_type": "standard-4",
+      "max_instances": 1
+    }
+  ],
   "durable_objects": {
     "bindings": [
       {
