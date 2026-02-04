@@ -38,12 +38,6 @@
       "new_sqlite_classes": [
         "Sandbox"
       ]
-    },
-    {
-      "tag": "v2",
-      "new_sqlite_classes": [
-        "Sandbox"
-      ]
     }
   ],
   "r2_buckets": [
