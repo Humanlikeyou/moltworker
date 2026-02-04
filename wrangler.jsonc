@@ -2,9 +2,7 @@
   "name": "moltworker",
   "main": "src/index.ts",
   "compatibility_date": "2026-02-02",
-  "compatibility_flags": [
-    "nodejs_compat"
-  ],
+  "compatibility_flags": ["nodejs_compat"],
   "vars": {
     "CF_ACCESS_TEAM_DOMAIN": "Humanlikeyou.cloudflareaccess.com",
     "WORKER_URL": "https://moltworker.tervellvsmith.workers.dev"
@@ -18,7 +16,7 @@
   },
   "containers": [
     {
-      "class_name": "Sandbox",
+      "class_name": "MoltBrain",
       "image": "./Dockerfile",
       "instance_type": "standard-4",
       "max_instances": 1
@@ -28,22 +26,14 @@
     "bindings": [
       {
         "name": "Sandbox",
-        "class_name": "Sandbox"
+        "class_name": "MoltBrain"
       }
     ]
   },
   "migrations": [
     {
-      "tag": "v1",
-      "new_sqlite_classes": [
-        "Sandbox"
-      ]
-    },
-    {
-      "tag": "v2",
-      "new_sqlite_classes": [
-        "Sandbox"
-      ]
+      "tag": "v_initial_fresh",
+      "new_sqlite_classes": ["MoltBrain"]
     }
   ],
   "r2_buckets": [
