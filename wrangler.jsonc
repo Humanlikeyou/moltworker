@@ -4,7 +4,7 @@
   "compatibility_date": "2026-02-02",
   "compatibility_flags": ["nodejs_compat"],
   "vars": {
-    "CF_ACCESS_TEAM_DOMAIN": "Humanlikeyou.cloudflareaccess.com",
+    "CF_ACCESS_TEAM_DOMAIN": "humanlikeyou.cloudflareaccess.com",
     "WORKER_URL": "https://moltworker.tervellvsmith.workers.dev"
   },
   "assets": {
