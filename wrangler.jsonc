@@ -2,7 +2,9 @@
   "name": "moltworker",
   "main": "src/index.ts",
   "compatibility_date": "2026-02-02",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "vars": {
     "CF_ACCESS_TEAM_DOMAIN": "Humanlikeyou.cloudflareaccess.com",
     "WORKER_URL": "https://moltworker.tervellvsmith.workers.dev"
@@ -33,7 +35,15 @@
   "migrations": [
     {
       "tag": "v1",
-      "new_sqlite_classes": ["Sandbox"]
+      "new_sqlite_classes": [
+        "Sandbox"
+      ]
+    },
+    {
+      "tag": "v2",
+      "new_sqlite_classes": [
+        "Sandbox"
+      ]
     }
   ],
   "r2_buckets": [
